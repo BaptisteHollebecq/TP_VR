@@ -6,6 +6,9 @@ Shader "Hidden/DrawingEffect"
         
         _GradThresh("Stencil Gradiant threshold", range(0.001 , 1)) = 0.024
         _Samples("Stencil Samples", range(2,40)) = 2
+        
+        _float1("float1", range(0,1)) = 1
+        _float2("float2", range(0,1)) = 1
     }
     SubShader
     {
@@ -27,6 +30,9 @@ Shader "Hidden/DrawingEffect"
 
                 float _GradThresh;
                 float _Samples;
+
+                float _float1;
+                float _float2;
 
                 #define PI2 6.28318530717959
                 #define STEP 8.0                //quality parameters
@@ -101,6 +107,7 @@ Shader "Hidden/DrawingEffect"
                         }
                     }
 
+                    //return smoothstep(weight, _float1, _float2);
                     
                     return weight;
                     

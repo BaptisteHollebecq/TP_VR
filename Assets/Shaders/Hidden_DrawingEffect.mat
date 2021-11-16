@@ -25,6 +25,8 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _GradThresh: 0.05
-    - _Samples: 20
+    - _Samples: 19.3
+    - _float1: 0.929
+    - _float2: 1
     m_Colors: []
   m_BuildTextureStacks: []
