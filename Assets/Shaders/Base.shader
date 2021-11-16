@@ -38,13 +38,15 @@ Shader "Hidden/Base"
             }
 
             sampler2D _MainTex;
+            half4 _MainTex_ST;
 
             fixed4 frag (v2f i) : SV_Target
             {
-                fixed4 col = tex2D(_MainTex, i.uv);
+                //fixed4 col = tex2D(_MainTex, i.uv);
                 // just invert the colors
                 //col.rgb = 1 - col.rgb;
-                return col;
+                return tex2D(_MainTex, UnityStereoScreenSpaceUVAdjust(i.uv, _MainTex_ST));
+            
             }
             ENDCG
         }
