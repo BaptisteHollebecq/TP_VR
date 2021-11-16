@@ -10,8 +10,18 @@ public class Deplacements : MonoBehaviour
     public GameObject LeftHandObject;
     public GameObject rightHandObject;
 
-    private void OnLeftTriggerPressed()
+
+    float leftpressed = 0;
+
+    private void OnLeftTriggerPressed(InputValue value)
     {
-        Debug.Log("Left Trigger pressed");
+        leftpressed = value.Get<float>();
+        Debug.Log(leftpressed);
+    }
+
+    private void Update()
+    {
+        if (leftpressed > .5f)
+            Debug.Log("pressed");
     }
 }
