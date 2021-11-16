@@ -7,8 +7,8 @@ Shader "Hidden/DrawingEffect"
         _GradThresh("Stencil Gradiant threshold", range(0.001 , 1)) = 0.024
         _Samples("Stencil Samples", range(2,40)) = 2
         
-        _float1("float1", range(0,1)) = 1
-        _float2("float2", range(0,1)) = 1
+        _step("step", range(1,64)) = 8.0
+        _range("range", range(1,64)) = 16.0
     }
     SubShader
     {
@@ -31,12 +31,12 @@ Shader "Hidden/DrawingEffect"
                 float _GradThresh;
                 float _Samples;
 
-                float _float1;
-                float _float2;
+                float _step;
+                float _range;
 
                 #define PI2 6.28318530717959
-                #define STEP 8.0                //quality parameters
-                #define RANGE 16.0
+                //#define STEP 8.0                //quality parameters
+                //#define RANGE 16.0
                 #define SENSITIVITY 20.0
 
                 struct appdata
@@ -77,6 +77,7 @@ Shader "Hidden/DrawingEffect"
 
                 half4 frag(v2f i) : SV_Target
                 {
+                    
                     float2 screenuv = i.uv.xy / i.uv.w;
                     float2 screenPos = float2(i.uv.x * _ScreenParams.x, i.uv.y * _ScreenParams.y);
                     half weight = 1;
@@ -90,7 +91,7 @@ Shader "Hidden/DrawingEffect"
                         float2 grad = float2(-dir.y, dir.x);
 
                         [loop]
-                        for (float i = -RANGE; i <= RANGE; i += STEP)
+                        for (float i = -_range; i <= _range; i += _step)
                         {
                             float2 b = normalize(dir);
                             float2 pos2 = screenPos + float2(b.x, b.y) * i;
@@ -103,17 +104,11 @@ Shader "Hidden/DrawingEffect"
                             if (sqrt(dot(g, g)) < _GradThresh)
                                 continue;
 
-                            weight -= pow(abs(dot(normalize(grad), normalize(g))), SENSITIVITY) / floor((2.0 * RANGE + 1.0) / STEP) / _Samples;
+                            weight -= pow(abs(dot(normalize(grad), normalize(g))), SENSITIVITY) / floor((2.0 * _range + 1.0) / _step) / _Samples;
                         }
                     }
-
-                    //return smoothstep(weight, _float1, _float2);
                     
                     return weight;
-                    
-                    /*float normalized = invLerp(0.7, 1, weight);
-                    float remapedWeight = lerp(0, 1, normalized);
-                    return remapedWeight;*/
 
                 }
             ENDCG
