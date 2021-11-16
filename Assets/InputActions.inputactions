@@ -2,7 +2,7 @@
     "name": "InputActions",
     "maps": [
         {
-            "name": "LeftHand",
+            "name": "LeftHandPersonnal",
             "id": "d0406f69-4299-4c58-83fc-83892a033289",
             "actions": [
                 {
@@ -48,7 +48,7 @@
             ]
         },
         {
-            "name": "RightHand",
+            "name": "RightHandPersonnal",
             "id": "9bcc6482-430c-4ba2-a665-96b0a250e611",
             "actions": [
                 {

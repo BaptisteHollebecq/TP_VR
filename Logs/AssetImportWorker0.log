@@ -124,3 +124,19 @@ Received Import Request.
 Start importing Assets/Scripts/Deplacements.cs using Guid(71779c1fd46123645859098c8b1e089b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bbe09970b7813222d5e5811573e517c2') in 0.002475 seconds 
   Import took 0.005146 seconds .
 
+========================================================================
+Received Import Request.
+  Time since last request: 120.405345 seconds.
+  path: Assets/Samples/OpenXR Plugin/1.2.8/Controller/ActionMap
+  artifactKey: Guid(1d0c39e584dadb748af03e40363d20a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Samples/OpenXR Plugin/1.2.8/Controller/ActionMap using Guid(1d0c39e584dadb748af03e40363d20a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b5a2df5c04e9f32ac1f2ae2473349fa1') in 0.002762 seconds 
+  Import took 0.005392 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 17.137168 seconds.
+  path: Assets/InputActions.inputactions
+  artifactKey: Guid(36e3e04891c2c594eab5c6329ac90682) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/InputActions.inputactions using Guid(36e3e04891c2c594eab5c6329ac90682) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '39369cc9cf776f1f11854d25623688f9') in 0.004191 seconds 
+  Import took 0.006904 seconds .
+
