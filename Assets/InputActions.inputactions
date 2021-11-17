@@ -7,9 +7,17 @@
             "actions": [
                 {
                     "name": "LeftTriggerPressed",
-                    "type": "Button",
+                    "type": "Value",
                     "id": "0a46bf3b-36f3-449f-90d9-9fa324b1d970",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "RightTriggerPressed",
+                    "type": "Value",
+                    "id": "78b9fe03-b983-43fe-9a51-62de1686a160",
+                    "expectedControlType": "Axis",
                     "processors": "",
                     "interactions": ""
                 }
@@ -34,6 +42,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "LeftTriggerPressed",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "cb2cc2ee-ea59-463f-a74d-d5d18171c0e8",
+                    "path": "<XRController>{RightHand}/triggerPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RightTriggerPressed",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
