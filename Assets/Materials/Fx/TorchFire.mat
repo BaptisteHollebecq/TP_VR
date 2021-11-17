@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: TorchFire
-  m_Shader: {fileID: 4800000, guid: ee0228d95071c004b89a2be391adf265, type: 3}
+  m_Shader: {fileID: 4800000, guid: 1f48c044942f47d46857e7524f05af35, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
