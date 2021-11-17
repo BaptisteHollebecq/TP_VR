@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Custom_HalftoneShader 2
+  m_Name: Test
   m_Shader: {fileID: 4800000, guid: e471f90dc03adf24ca44a23993f88c08, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
