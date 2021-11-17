@@ -9,6 +9,7 @@ Shader "Hidden/DrawingEffect"
         
         _step("step", range(1,64)) = 8.0
         _range("range", range(1,64)) = 16.0
+        _sensitivity("range", range(1,64)) = 20
     }
     SubShader
     {
@@ -33,11 +34,12 @@ Shader "Hidden/DrawingEffect"
 
                 float _step;
                 float _range;
+                float _sensitivity;
 
                 #define PI2 6.28318530717959
                 //#define STEP 8.0                //quality parameters
                 //#define RANGE 16.0
-                #define SENSITIVITY 20.0
+                //#define SENSITIVITY 20.0
 
                 struct appdata
                 {
@@ -77,6 +79,10 @@ Shader "Hidden/DrawingEffect"
 
                 half4 frag(v2f i) : SV_Target
                 {
+                    i.uv.y = 1 - i.uv.y;
+                    float3 col = tex2D(_MainTex, i.uv);
+                    float lum = dot(col, float3(1,1,1));
+                    float mask = step(lum, 0.5f);
                     
                     float2 screenuv = i.uv.xy / i.uv.w;
                     float2 screenPos = float2(i.uv.x * _ScreenParams.x, i.uv.y * _ScreenParams.y);
@@ -104,12 +110,15 @@ Shader "Hidden/DrawingEffect"
                             if (sqrt(dot(g, g)) < _GradThresh)
                                 continue;
 
-                            weight -= pow(abs(dot(normalize(grad), normalize(g))), SENSITIVITY) / floor((2.0 * _range + 1.0) / _step) / _Samples;
+                            weight -= pow(abs(dot(normalize(grad), normalize(g))), _sensitivity) / floor((2.0 * _range + 1.0) / _step) / _Samples;
                         }
                     }
-                    
-                    return weight;
 
+                    
+                    //col *= (1 - mask) * weight;
+                    col *= weight;
+                    
+                    return  half4(col,1);
                 }
             ENDCG
         }
