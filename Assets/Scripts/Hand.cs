@@ -26,17 +26,14 @@ public class Hand : MonoBehaviour
         _object = null;
     }
 
-    public bool GrabObject()
+    public void GrabObject()
     {
-        if (_object == null)
+        if (_object != null)
         {
-            return Holding;
+            _objectParentTransform = _object.transform.parent;
+            _object.transform.parent = this.transform;
+            Holding = true;
         }
-
-        _objectParentTransform = _object.transform.parent;
-        _object.transform.parent = this.transform;
-        Holding = true;
-        return Holding;
     }
 
     public void DropObject()
