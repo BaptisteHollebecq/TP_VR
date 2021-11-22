@@ -23,7 +23,7 @@ public class Torch : MonoBehaviour
         else
         {
             baseIntensity = torchLight.intensity;
-            StartCoroutine(DoFlicker());
+           // StartCoroutine(DoFlicker());
         }
     }
 
@@ -35,14 +35,14 @@ public class Torch : MonoBehaviour
             torchLight.enabled = true;
             fire.SetActive(true);
             baseIntensity = torchLight.intensity;
-            StartCoroutine(DoFlicker());
+            //StartCoroutine(DoFlicker());
         }
         else
         {
             On = false;
             torchLight.enabled = false;
             fire.SetActive(false);
-            StopCoroutine(DoFlicker());
+            //StopCoroutine(DoFlicker());
         }
     }
 
@@ -50,9 +50,12 @@ public class Torch : MonoBehaviour
     {
         if (other.tag == "Light")
         {
-            Torch t = other.transform.parent.GetComponent<Torch>();
-            if (t != this)
-                t.Switch();
+            if (On)
+            {
+                Torch t = other.transform.parent.GetComponent<Torch>();
+                if (t != this)
+                    t.Switch();
+            }
         }
     }
 
