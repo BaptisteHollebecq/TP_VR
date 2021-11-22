@@ -5,8 +5,8 @@ using UnityEngine;
 public class Hand : MonoBehaviour
 {
     public bool Holding = false;
-
     public GameObject Object = null;
+
     private Rigidbody _rb;
     private float _grabLayer = 9;
 
