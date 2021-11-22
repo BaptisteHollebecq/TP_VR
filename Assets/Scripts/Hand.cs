@@ -7,7 +7,7 @@ public class Hand : MonoBehaviour
     [SerializeField]
     public bool Holding = false;
 
-    private GameObject _object;
+    private GameObject _object = null;
     private Transform _objectParentTransform;
 
 
@@ -19,11 +19,13 @@ public class Hand : MonoBehaviour
         }
 
         _object = collision.gameObject;
+        Debug.Log("COLLIDE OBJECT");
     }
 
     private void OnCollisionExit(Collision collision)
     {
         _object = null;
+        Debug.Log("COLLIDE OFF OBJECT");
     }
 
     public void GrabObject()
@@ -33,6 +35,7 @@ public class Hand : MonoBehaviour
             _objectParentTransform = _object.transform.parent;
             _object.transform.parent = this.transform;
             Holding = true;
+            Debug.Log("GRAB OBJECT");
         }
     }
 
@@ -40,5 +43,6 @@ public class Hand : MonoBehaviour
     {
         _object.transform.parent = _objectParentTransform;
         Holding = false;
+        Debug.Log("DROP OBJECT");
     }
 }
