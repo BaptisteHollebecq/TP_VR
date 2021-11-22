@@ -24,16 +24,13 @@ public class Hand : MonoBehaviour
 
     private void OnCollisionExit(Collision collision)
     {
-        _object = null;
+        //_object = null;
         Debug.Log("COLLIDE OFF OBJECT");
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (_object != null)
-        {
-            return;
-        }
+       
 
         _object = other.gameObject;
         Debug.Log("TRIGGER OBJECT");
