@@ -13,8 +13,11 @@ public class Hand : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        _object = other.gameObject;
-        Debug.Log("TRIGGER OBJECT");
+        //if (/*_object.tag.Equals("Grab")*/)
+        //{
+            _object = other.gameObject;
+            Debug.Log("TRIGGER OBJECT");
+        //}
     }
     
     private void OnTriggerExit(Collider other)
@@ -25,7 +28,7 @@ public class Hand : MonoBehaviour
 
     public void GrabObject()
     {
-        if (_object != null)
+        if (_object != null /*&& _object.tag.Equals("Grab")*/)
         {
             _rb = _object.GetComponent<Rigidbody>();
             _rb.isKinematic = true;
@@ -35,10 +38,19 @@ public class Hand : MonoBehaviour
         }
     }
 
+    private Vector3 _prevPosition;
+
+    private void Update()
+    {
+        _prevPosition = transform.position;
+    }
+
     public void DropObject()
     {
         _object.transform.parent = null;
         _rb.isKinematic = false;
+        Vector3 vel = (transform.position - _prevPosition) / Time.deltaTime;
+        _rb.AddForce(vel);
         Holding = false;
         Debug.Log("DROP OBJECT");
     }
