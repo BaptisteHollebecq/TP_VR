@@ -20,9 +20,17 @@ public class @InputActions : IInputActionCollection, IDisposable
             ""actions"": [
                 {
                     ""name"": ""LeftTriggerPressed"",
-                    ""type"": ""Button"",
+                    ""type"": ""Value"",
                     ""id"": ""0a46bf3b-36f3-449f-90d9-9fa324b1d970"",
-                    ""expectedControlType"": ""Button"",
+                    ""expectedControlType"": ""Axis"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""RightTriggerPressed"",
+                    ""type"": ""Value"",
+                    ""id"": ""c4b82a08-f152-4809-b9da-adb53d42c4a2"",
+                    ""expectedControlType"": ""Axis"",
                     ""processors"": """",
                     ""interactions"": """"
                 }
@@ -30,8 +38,8 @@ public class @InputActions : IInputActionCollection, IDisposable
             ""bindings"": [
                 {
                     ""name"": """",
-                    ""id"": ""54e1e183-e0b5-4eac-bc45-8886329d45df"",
-                    ""path"": ""<Keyboard>/space"",
+                    ""id"": ""82a74e5c-104c-480d-b559-3bb959ae29bf"",
+                    ""path"": ""<XRController>{LeftHand}/trigger"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -41,12 +49,12 @@ public class @InputActions : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""82a74e5c-104c-480d-b559-3bb959ae29bf"",
-                    ""path"": ""<XRController>{LeftHand}/triggerPressed"",
+                    ""id"": ""dee45932-7c33-45e3-ae5c-f9e938d55c2e"",
+                    ""path"": ""<XRController>{RightHand}/trigger"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""LeftTriggerPressed"",
+                    ""action"": ""RightTriggerPressed"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -58,6 +66,7 @@ public class @InputActions : IInputActionCollection, IDisposable
         // Player
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_LeftTriggerPressed = m_Player.FindAction("LeftTriggerPressed", throwIfNotFound: true);
+        m_Player_RightTriggerPressed = m_Player.FindAction("RightTriggerPressed", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -108,11 +117,13 @@ public class @InputActions : IInputActionCollection, IDisposable
     private readonly InputActionMap m_Player;
     private IPlayerActions m_PlayerActionsCallbackInterface;
     private readonly InputAction m_Player_LeftTriggerPressed;
+    private readonly InputAction m_Player_RightTriggerPressed;
     public struct PlayerActions
     {
         private @InputActions m_Wrapper;
         public PlayerActions(@InputActions wrapper) { m_Wrapper = wrapper; }
         public InputAction @LeftTriggerPressed => m_Wrapper.m_Player_LeftTriggerPressed;
+        public InputAction @RightTriggerPressed => m_Wrapper.m_Player_RightTriggerPressed;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -125,6 +136,9 @@ public class @InputActions : IInputActionCollection, IDisposable
                 @LeftTriggerPressed.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnLeftTriggerPressed;
                 @LeftTriggerPressed.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnLeftTriggerPressed;
                 @LeftTriggerPressed.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnLeftTriggerPressed;
+                @RightTriggerPressed.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRightTriggerPressed;
+                @RightTriggerPressed.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRightTriggerPressed;
+                @RightTriggerPressed.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRightTriggerPressed;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -132,6 +146,9 @@ public class @InputActions : IInputActionCollection, IDisposable
                 @LeftTriggerPressed.started += instance.OnLeftTriggerPressed;
                 @LeftTriggerPressed.performed += instance.OnLeftTriggerPressed;
                 @LeftTriggerPressed.canceled += instance.OnLeftTriggerPressed;
+                @RightTriggerPressed.started += instance.OnRightTriggerPressed;
+                @RightTriggerPressed.performed += instance.OnRightTriggerPressed;
+                @RightTriggerPressed.canceled += instance.OnRightTriggerPressed;
             }
         }
     }
@@ -139,5 +156,6 @@ public class @InputActions : IInputActionCollection, IDisposable
     public interface IPlayerActions
     {
         void OnLeftTriggerPressed(InputAction.CallbackContext context);
+        void OnRightTriggerPressed(InputAction.CallbackContext context);
     }
 }

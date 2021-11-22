@@ -7,9 +7,17 @@
             "actions": [
                 {
                     "name": "LeftTriggerPressed",
-                    "type": "Button",
+                    "type": "Value",
                     "id": "0a46bf3b-36f3-449f-90d9-9fa324b1d970",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "RightTriggerPressed",
+                    "type": "Value",
+                    "id": "c4b82a08-f152-4809-b9da-adb53d42c4a2",
+                    "expectedControlType": "Axis",
                     "processors": "",
                     "interactions": ""
                 }
@@ -17,8 +25,8 @@
             "bindings": [
                 {
                     "name": "",
-                    "id": "54e1e183-e0b5-4eac-bc45-8886329d45df",
-                    "path": "<Keyboard>/space",
+                    "id": "82a74e5c-104c-480d-b559-3bb959ae29bf",
+                    "path": "<XRController>{LeftHand}/trigger",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -28,12 +36,12 @@
                 },
                 {
                     "name": "",
-                    "id": "82a74e5c-104c-480d-b559-3bb959ae29bf",
-                    "path": "<XRController>{LeftHand}/triggerPressed",
+                    "id": "dee45932-7c33-45e3-ae5c-f9e938d55c2e",
+                    "path": "<XRController>{RightHand}/trigger",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "LeftTriggerPressed",
+                    "action": "RightTriggerPressed",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
