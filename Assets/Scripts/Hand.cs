@@ -7,32 +7,30 @@ public class Hand : MonoBehaviour
     [SerializeField]
     public bool Holding = false;
 
-    private GameObject _object = null;
+    public GameObject Object = null;
     private Rigidbody _rb;
+    private float _grabLayer = 9;
 
 
     private void OnTriggerEnter(Collider other)
     {
-        //if (/*_object.tag.Equals("Grab")*/)
-        //{
-            _object = other.gameObject;
-            Debug.Log("TRIGGER OBJECT");
-        //}
+        Object = other.gameObject;
+        Debug.Log("TRIGGER OBJECT");
     }
     
     private void OnTriggerExit(Collider other)
     {
-        _object = null;
+        Object = null;
         Debug.Log("TRIGGER OFF OBJECT");
     }
 
     public void GrabObject()
     {
-        if (_object != null /*&& _object.tag.Equals("Grab")*/)
+        if (Object != null && Object.tag == "Grab")
         {
-            _rb = _object.GetComponent<Rigidbody>();
+            _rb = Object.GetComponent<Rigidbody>();
             _rb.isKinematic = true;
-            _object.transform.parent = this.transform;
+            Object.transform.parent = this.transform;
             Holding = true;
             Debug.Log("GRAB OBJECT");
         }
@@ -47,10 +45,10 @@ public class Hand : MonoBehaviour
 
     public void DropObject()
     {
-        _object.transform.parent = null;
+        Object.transform.parent = null;
         _rb.isKinematic = false;
         Vector3 vel = (transform.position - _prevPosition) / Time.deltaTime;
-        _rb.AddForce(vel);
+        _rb.velocity = vel;
         Holding = false;
         Debug.Log("DROP OBJECT");
     }

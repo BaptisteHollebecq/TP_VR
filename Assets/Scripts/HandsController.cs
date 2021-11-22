@@ -12,7 +12,6 @@ public class HandsController : MonoBehaviour
 
     public static float MIN_TRIGGER = 0.3f;
 
-
     private float _leftPressed = 0;
     private float _rightPressed = 0;
 
@@ -30,25 +29,25 @@ public class HandsController : MonoBehaviour
 
     private void Update()
     {
-        if (_leftPressed > .9f && !RightHand.Holding)
+        if (_leftPressed > MIN_TRIGGER && !RightHand.Holding)
         {
             Debug.Log("Grab object");
             LeftHand.GrabObject();
         }
 
-        if (_leftPressed < .1f  && LeftHand.Holding)
+        if (_leftPressed < MIN_TRIGGER  && LeftHand.Holding)
         {
             LeftHand.DropObject();
             Debug.Log("Drop object");
         }
 
-        if (_rightPressed > .9f && !RightHand.Holding)
+        if (_rightPressed > MIN_TRIGGER && !RightHand.Holding)
         {
             RightHand.GrabObject();
             Debug.Log("Grab object");
         }
 
-        if (_rightPressed < .1f && RightHand.Holding)
+        if (_rightPressed < MIN_TRIGGER && RightHand.Holding)
         {
             RightHand.DropObject();
             Debug.Log("Drop object");
