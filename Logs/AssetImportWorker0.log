@@ -348,3 +348,191 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.012176 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.58 ms, found 7 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.920 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.59 ms, found 7 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1883 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 86.6 MB.
+System memory in use after: 86.4 MB.
+
+Unloading 32 unused Assets to reduce memory usage. Loaded Objects now: 2360.
+Total: 2.262600 ms (FindLiveObjects: 0.244000 ms CreateObjectMapping: 0.046600 ms MarkObjects: 1.788200 ms  DeleteObjects: 0.182900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 2044.709661 seconds.
+  path: Assets/Easy Grab VR/Demo
+  artifactKey: Guid(d64f083138fd5e04380e7c6bb10ba9fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Easy Grab VR/Demo using Guid(d64f083138fd5e04380e7c6bb10ba9fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '07b2f276402be408705efa9b63f8c9e3') in 0.006083 seconds 
+  Import took 0.008881 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000333 seconds.
+  path: Assets/Easy Grab VR/Demo
+  artifactKey: Guid(d64f083138fd5e04380e7c6bb10ba9fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Easy Grab VR/Demo using Guid(d64f083138fd5e04380e7c6bb10ba9fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '07b2f276402be408705efa9b63f8c9e3') in 0.002651 seconds 
+  Import took 0.005414 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.151383 seconds.
+  path: Assets/Easy Grab VR/Demo/Scenes
+  artifactKey: Guid(0b4cf8f4ada88194694b746b1ee4be37) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Easy Grab VR/Demo/Scenes using Guid(0b4cf8f4ada88194694b746b1ee4be37) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd7eaf3def742118a2849413d9e9999d8') in 0.002965 seconds 
+  Import took 0.005773 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.020452 seconds.
+  path: Assets/Easy Grab VR/Demo/Scenes/OculusSDKDemo.unity
+  artifactKey: Guid(0b16840ae8c457b4ab01f4b505a43756) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Easy Grab VR/Demo/Scenes/OculusSDKDemo.unity using Guid(0b16840ae8c457b4ab01f4b505a43756) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a320d1d8be6e22b2c4cdf223623ef1a9') in 0.011816 seconds 
+  Import took 0.014570 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.610264 seconds.
+  path: Assets/Easy Grab VR/Demo/Scenes/OculusSDKMovementDemo.unity
+  artifactKey: Guid(72bc1778b33f54b4199c1ee4bee442a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Easy Grab VR/Demo/Scenes/OculusSDKMovementDemo.unity using Guid(72bc1778b33f54b4199c1ee4bee442a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e8a2fa6a4f18dab442d62567205928a') in 0.003829 seconds 
+  Import took 0.006686 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.950330 seconds.
+  path: Assets/Easy Grab VR/Demo/Scenes/SteamVRDemo.unity
+  artifactKey: Guid(b6951aaedd4f1c549a9efe4240ab8a15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Easy Grab VR/Demo/Scenes/SteamVRDemo.unity using Guid(b6951aaedd4f1c549a9efe4240ab8a15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '34cd5e2dad928dcc3999cae0f9b500f5') in 0.003664 seconds 
+  Import took 0.006570 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 23.173154 seconds.
+  path: Assets/Easy Grab VR/README.md
+  artifactKey: Guid(9d89553d14e07364a9e1506184e298dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Easy Grab VR/README.md using Guid(9d89553d14e07364a9e1506184e298dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce4626a6390f877e3e72734f35339b6e') in 0.005287 seconds 
+  Import took 0.008183 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 31.143815 seconds.
+  path: Assets/Easy Grab VR/Prefabs
+  artifactKey: Guid(4d2768fd4ae0d974990eaf68ef8c4c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Easy Grab VR/Prefabs using Guid(4d2768fd4ae0d974990eaf68ef8c4c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3cd36ff5b4bd84c232d7319f71a40dc6') in 0.002791 seconds 
+  Import took 0.005412 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.074367 seconds.
+  path: Assets/Easy Grab VR/Prefabs/Button Bank.prefab
+  artifactKey: Guid(0670778d0221e6b42b7ee0ca2144287c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Easy Grab VR/Prefabs/Button Bank.prefab using Guid(0670778d0221e6b42b7ee0ca2144287c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06c269e7425c25b1843b12350dfa3db0') in 0.040195 seconds 
+  Import took 0.043387 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000229 seconds.
+  path: Assets/Easy Grab VR/Prefabs/Lever.prefab
+  artifactKey: Guid(df9ee541ca906df4ebb98efdef81c179) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Easy Grab VR/Prefabs/Lever.prefab using Guid(df9ee541ca906df4ebb98efdef81c179) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'adbb36f3de142bc883501b037d47f628') in 0.010418 seconds 
+  Import took 0.013047 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000149 seconds.
+  path: Assets/Easy Grab VR/Prefabs/Slider.prefab
+  artifactKey: Guid(921ab51574fec464895ff569ea56ed6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Easy Grab VR/Prefabs/Slider.prefab using Guid(921ab51574fec464895ff569ea56ed6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54bb1fcc86a285a6dffb138cf1c4abb2') in 0.010598 seconds 
+  Import took 0.013000 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000168 seconds.
+  path: Assets/Easy Grab VR/Prefabs/Drawer.prefab
+  artifactKey: Guid(d76a58f8fc8ba2948b801db3c92cd393) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Easy Grab VR/Prefabs/Drawer.prefab using Guid(d76a58f8fc8ba2948b801db3c92cd393) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6d5db8c8eedf0a2acaa306375d36eae') in 0.103262 seconds 
+  Import took 0.105752 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000223 seconds.
+  path: Assets/Easy Grab VR/Prefabs/Button.prefab
+  artifactKey: Guid(d073bc5cb2dec5547abfdffb810e5259) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Easy Grab VR/Prefabs/Button.prefab using Guid(d073bc5cb2dec5547abfdffb810e5259) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '14534d8e13381d80d7c679f872da55a1') in 0.009205 seconds 
+  Import took 0.012193 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000227 seconds.
+  path: Assets/Easy Grab VR/Prefabs/hammer.prefab
+  artifactKey: Guid(5a64fbb430b10f746811120d54c34d5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Easy Grab VR/Prefabs/hammer.prefab using Guid(5a64fbb430b10f746811120d54c34d5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00a4e15c99c6bf882a4842115b94190f') in 0.012349 seconds 
+  Import took 0.015252 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000276 seconds.
+  path: Assets/Easy Grab VR/Prefabs/Cabinet.prefab
+  artifactKey: Guid(af11e877917e7594cb4f4edba9b699a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Easy Grab VR/Prefabs/Cabinet.prefab using Guid(af11e877917e7594cb4f4edba9b699a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c65acfffec7f2576245df35c65176c63') in 0.110801 seconds 
+  Import took 0.113977 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 159.848156 seconds.
+  path: Assets/Scenes/SampleScene.unity
+  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/SampleScene.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4dc1bc30266a4269ff579902e9bd014d') in 0.003924 seconds 
+  Import took 0.006946 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.010141 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.58 ms, found 7 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.876 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.58 ms, found 7 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1882 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 86.7 MB.
+System memory in use after: 86.5 MB.
+
+Unloading 33 unused Assets to reduce memory usage. Loaded Objects now: 2364.
+Total: 2.190700 ms (FindLiveObjects: 0.196700 ms CreateObjectMapping: 0.041600 ms MarkObjects: 1.758000 ms  DeleteObjects: 0.193600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
