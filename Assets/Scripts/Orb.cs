@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Orb : MonoBehaviour
 {
-
+    public LayerMask GroundLayer;
     public float Power = 10f;
 
     private Rigidbody _rb;
@@ -17,5 +17,14 @@ public class Orb : MonoBehaviour
     public void Shoot(Vector3 direction)
     {
         _rb.AddForce(direction * Power, ForceMode.Impulse);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.layer == GroundLayer)
+        {
+            Debug.Log("ground");
+            Destroy(gameObject);
+        }
     }
 }
