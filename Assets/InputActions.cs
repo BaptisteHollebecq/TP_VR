@@ -36,17 +36,17 @@ public class @InputActions : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": ""LeftGripPressed"",
-                    ""type"": ""Button"",
+                    ""type"": ""Value"",
                     ""id"": ""76146ab2-17d3-44d0-beb4-8d888c23c8a1"",
-                    ""expectedControlType"": ""Button"",
+                    ""expectedControlType"": ""Axis"",
                     ""processors"": """",
                     ""interactions"": """"
                 },
                 {
                     ""name"": ""RightGripPressed"",
-                    ""type"": ""Button"",
+                    ""type"": ""Value"",
                     ""id"": ""01b5a0ec-db40-4317-8d4a-02217919a5ff"",
-                    ""expectedControlType"": ""Button"",
+                    ""expectedControlType"": ""Axis"",
                     ""processors"": """",
                     ""interactions"": """"
                 }
@@ -77,7 +77,7 @@ public class @InputActions : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""c5224e2f-4502-4e12-9f4a-7f49b7d84ef4"",
-                    ""path"": ""<XRController>{LeftHand}/gripPressed"",
+                    ""path"": ""<XRController>{LeftHand}/grip"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -88,7 +88,7 @@ public class @InputActions : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""66c758fa-673e-464e-be26-5d8125c6b496"",
-                    ""path"": ""<XRController>{RightHand}/gripPressed"",
+                    ""path"": ""<XRController>{RightHand}/grip"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
