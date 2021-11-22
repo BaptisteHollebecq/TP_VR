@@ -8,8 +8,6 @@ public class Hand : MonoBehaviour
     public GameObject Object = null;
 
     private Rigidbody _rb;
-    private float _grabLayer = 9;
-
 
     private void OnTriggerEnter(Collider other)
     {
@@ -39,9 +37,7 @@ public class Hand : MonoBehaviour
     {
         Object.transform.parent = null;
         _rb.isKinematic = false;
-        Vector3 prevPosition = transform.position;
-        Vector3 vel = (transform.position - prevPosition) / Time.deltaTime;
-        _rb.velocity = vel;
+        _rb.velocity = this.GetComponent<Rigidbody>().velocity;
         Holding = false;
         Debug.Log("DROP OBJECT");
     }
