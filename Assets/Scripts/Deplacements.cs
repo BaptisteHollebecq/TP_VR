@@ -7,6 +7,8 @@ using UnityEngine.InputSystem;
 
 public class Deplacements : MonoBehaviour
 {
+    public float headHeight = 1.65f;
+
     public GameObject LeftHandObject;
     public GameObject rightHandObject;
     public GameObject Orb;
@@ -37,6 +39,7 @@ public class Deplacements : MonoBehaviour
             DrawRightLine();
         if (rightpressed == 0 && movementRight)
             ShotRight();
+
     }
 
     private void ShotRight()
@@ -44,6 +47,12 @@ public class Deplacements : MonoBehaviour
         movementRight = false;
         var inst = Instantiate(Orb, rightHandObject.transform.position, Quaternion.identity);
         Orb b = inst.GetComponent<Orb>();
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, - transform.up, out hit))
+        {
+            b.height = (hit.point - transform.position).magnitude;
+        }
+        b.playerRig = gameObject;
         b.Shoot(rightHandObject.transform.forward);
     }
 
@@ -52,26 +61,22 @@ public class Deplacements : MonoBehaviour
         movementLeft = false;
         var inst = Instantiate(Orb, LeftHandObject.transform.position, Quaternion.identity);
         Orb b = inst.GetComponent<Orb>();
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, -transform.up, out hit))
+        {
+            b.height = (hit.point - transform.position).magnitude;
+        }
+        b.playerRig = gameObject;
         b.Shoot(LeftHandObject.transform.forward);
     }
 
     private void DrawLeftLine()
     {
-        Debug.Log("left pressed");
         movementLeft = true;
-        Debug.DrawRay(LeftHandObject.transform.position, LeftHandObject.transform.forward, Color.red);
-        Debug.DrawRay(LeftHandObject.transform.position, - LeftHandObject.transform.forward, Color.green);
-        Debug.DrawRay(LeftHandObject.transform.position, - LeftHandObject.transform.right, Color.blue);
-        Debug.DrawRay(LeftHandObject.transform.position,LeftHandObject.transform.right, Color.yellow);
     }
 
     private void DrawRightLine()
     {
-        Debug.Log("right pressed");
         movementRight = true;
-        Debug.DrawRay(rightHandObject.transform.position, rightHandObject.transform.forward, Color.red);
-        Debug.DrawRay(rightHandObject.transform.position, - rightHandObject.transform.forward, Color.green);
-        Debug.DrawRay(rightHandObject.transform.position, - rightHandObject.transform.right, Color.blue);
-        Debug.DrawRay(rightHandObject.transform.position,rightHandObject.transform.right, Color.yellow);
     }
 }

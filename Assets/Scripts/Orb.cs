@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Orb : MonoBehaviour
 {
-    public LayerMask GroundLayer;
+    public GameObject playerRig;
+    public float height = 1.65f;
     public float Power = 10f;
 
     private Rigidbody _rb;
@@ -24,7 +25,14 @@ public class Orb : MonoBehaviour
         if (collision.gameObject.tag == "Ground")
         {
             Debug.Log("ground");
+
+            Vector3 position = collision.contacts[0].point;
+            position.y += height;
+
+            playerRig.transform.position = position;
+
             Destroy(gameObject);
         }
+
     }
 }
