@@ -11,23 +11,6 @@ public class Hand : MonoBehaviour
     private Rigidbody _rb;
 
 
-    /*private void OnCollisionEnter(Collision collision)
-    {
-        if (_object != null)
-        {
-            return;
-        }
-
-        _object = collision.gameObject;
-        Debug.Log("COLLIDE OBJECT");
-    }
-
-    private void OnCollisionExit(Collision collision)
-    {
-        //_object = null;
-        Debug.Log("COLLIDE OFF OBJECT");
-    }*/
-
     private void OnTriggerEnter(Collider other)
     {
         _object = other.gameObject;
