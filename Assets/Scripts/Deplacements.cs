@@ -12,6 +12,7 @@ public class Deplacements : MonoBehaviour
     public GameObject LeftHandObject;
     public GameObject rightHandObject;
     public GameObject Orb;
+    public HandsController handController;
 
 
     float leftpressed = 0;
@@ -53,6 +54,7 @@ public class Deplacements : MonoBehaviour
             b.height = (hit.point - transform.position).magnitude;
         }
         b.playerRig = gameObject;
+        b.handController = handController;
         b.Shoot(rightHandObject.transform.forward);
     }
 
@@ -67,6 +69,7 @@ public class Deplacements : MonoBehaviour
             b.height = (hit.point - transform.position).magnitude;
         }
         b.playerRig = gameObject;
+        b.handController = handController;
         b.Shoot(LeftHandObject.transform.forward);
     }
 
