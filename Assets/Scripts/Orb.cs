@@ -32,9 +32,18 @@ public class Orb : MonoBehaviour
             position.y += height;
 
             playerRig.transform.position = position;
-            if (handController.LeftHand.Object != null)
+
+            if (waterTouched && handController.LeftHand.Object != null)
             {
                 if (handController.LeftHand.Object.TryGetComponent<Torch>(out Torch t))
+                {
+                    if (t.On)
+                        t.Switch();
+                }
+            }
+            if (waterTouched && handController.RightHand.Object != null)
+            {
+                if (handController.RightHand.Object.TryGetComponent<Torch>(out Torch t))
                 {
                     if (t.On)
                         t.Switch();
