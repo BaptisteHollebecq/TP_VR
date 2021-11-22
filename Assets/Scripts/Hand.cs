@@ -48,7 +48,7 @@ public class Hand : MonoBehaviour
         Object.transform.parent = null;
         _rb.isKinematic = false;
         Vector3 vel = (transform.position - _prevPosition) / Time.deltaTime;
-        _rb.AddForce(vel);
+        _rb.velocity = vel;
         Holding = false;
         Debug.Log("DROP OBJECT");
     }
