@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 1268754000960515856}
   m_Layer: 0
   m_Name: GoodTorch
-  m_TagString: Untagged
+  m_TagString: Grab
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -132,6 +132,8 @@ MonoBehaviour:
   fire: {fileID: 7490904942373518460}
   torchLight: {fileID: 7490904941589267761}
   On: 1
+  maxIntesity: 1.5
+  minIntesity: 0.5
 --- !u!135 &1268754000960515856
 SphereCollider:
   m_ObjectHideFlags: 0
