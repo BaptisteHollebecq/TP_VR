@@ -21,7 +21,7 @@ public class Orb : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.layer == GroundLayer)
+        if (collision.gameObject.tag == "Ground")
         {
             Debug.Log("ground");
             Destroy(gameObject);
