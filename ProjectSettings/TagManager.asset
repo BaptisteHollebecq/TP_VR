@@ -5,7 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
-  - Grab
+  - Light
   layers:
   - Default
   - TransparentFX
@@ -16,7 +16,7 @@ TagManager:
   - Ground
   - Hand
   - Orb
-  - Grabbable
+  - 
   - 
   - 
   - 
