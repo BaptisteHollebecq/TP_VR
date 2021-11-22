@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 379354267858117879}
   - component: {fileID: 4912707743091232107}
   - component: {fileID: 2953289870698338380}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Orb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -112,7 +112,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!114 &2953289870698338380
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -125,4 +125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 344071ef5ce036c4d835079c61cf6da1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GroundLayer:
+    serializedVersion: 2
+    m_Bits: 64
   Power: 10
