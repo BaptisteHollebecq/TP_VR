@@ -11,14 +11,20 @@ public class Hand : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Object = other.gameObject;
-        Debug.Log("TRIGGER OBJECT");
+        if (!Holding)
+        {
+            Object = other.gameObject;
+            Debug.Log("TRIGGER OBJECT");
+        }
     }
     
     private void OnTriggerExit(Collider other)
     {
-        Object = null;
-        Debug.Log("TRIGGER OFF OBJECT");
+        if (!Holding)
+        {
+            Object = null;
+            Debug.Log("TRIGGER OFF OBJECT");
+        }
     }
 
     public void GrabObject()
@@ -37,7 +43,6 @@ public class Hand : MonoBehaviour
     {
         Object.transform.parent = null;
         _rb.isKinematic = false;
-        _rb.velocity = this.GetComponent<Rigidbody>().velocity;
         Holding = false;
         Debug.Log("DROP OBJECT");
     }

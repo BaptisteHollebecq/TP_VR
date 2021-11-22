@@ -40,7 +40,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _Diffraction: 0.02
+    - _Diffraction: 0.01
     - _Float0: 1
     - _Tiling: 0.5
     - _Tilingnormal: 1
