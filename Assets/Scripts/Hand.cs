@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Hand : MonoBehaviour
 {
-    [SerializeField]
     public bool Holding = false;
 
     public GameObject Object = null;
@@ -36,18 +35,12 @@ public class Hand : MonoBehaviour
         }
     }
 
-    private Vector3 _prevPosition;
-
-    private void Update()
-    {
-        _prevPosition = transform.position;
-    }
-
     public void DropObject()
     {
         Object.transform.parent = null;
         _rb.isKinematic = false;
-        Vector3 vel = (transform.position - _prevPosition) / Time.deltaTime;
+        Vector3 prevPosition = transform.position;
+        Vector3 vel = (transform.position - prevPosition) / Time.deltaTime;
         _rb.velocity = vel;
         Holding = false;
         Debug.Log("DROP OBJECT");
