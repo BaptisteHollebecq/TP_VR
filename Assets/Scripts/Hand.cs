@@ -8,7 +8,7 @@ public class Hand : MonoBehaviour
     public bool Holding = false;
 
     private GameObject _object = null;
-    private Transform _objectParentTransform;
+    private Rigidbody _rb;
 
 
     private void OnCollisionEnter(Collision collision)
@@ -28,11 +28,14 @@ public class Hand : MonoBehaviour
         Debug.Log("COLLIDE OFF OBJECT");
     }
 
+    
+
     public void GrabObject()
     {
         if (_object != null)
         {
-            _objectParentTransform = _object.transform.parent;
+            _rb = _object.GetComponent<Rigidbody>();
+            _rb.isKinematic = true;
             _object.transform.parent = this.transform;
             Holding = true;
             Debug.Log("GRAB OBJECT");
@@ -41,7 +44,8 @@ public class Hand : MonoBehaviour
 
     public void DropObject()
     {
-        _object.transform.parent = _objectParentTransform;
+        _object.transform.parent = null;
+        _rb.isKinematic = false;
         Holding = false;
         Debug.Log("DROP OBJECT");
     }
