@@ -33,7 +33,7 @@ public class HandsController : MonoBehaviour
         if (_leftPressed > .5f)
             Debug.Log("pressed");
 
-        if (_leftPressed > MIN_TRIGGER /*&& !RightHand.Holding*/)
+        if (_leftPressed > MIN_TRIGGER && !RightHand.Holding)
         {
             Debug.Log("Grab object");
             LeftHand.GrabObject();
@@ -45,7 +45,7 @@ public class HandsController : MonoBehaviour
             Debug.Log("Drop object");
         }
 
-        if (_rightPressed > MIN_TRIGGER/* && !RightHand.Holding*/)
+        if (_rightPressed > MIN_TRIGGER && !RightHand.Holding)
         {
             RightHand.GrabObject();
             Debug.Log("Grab object");

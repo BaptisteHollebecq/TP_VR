@@ -11,7 +11,7 @@ public class Hand : MonoBehaviour
     private Rigidbody _rb;
 
 
-    private void OnCollisionEnter(Collision collision)
+    /*private void OnCollisionEnter(Collision collision)
     {
         if (_object != null)
         {
@@ -26,12 +26,10 @@ public class Hand : MonoBehaviour
     {
         //_object = null;
         Debug.Log("COLLIDE OFF OBJECT");
-    }
+    }*/
 
     private void OnTriggerEnter(Collider other)
     {
-       
-
         _object = other.gameObject;
         Debug.Log("TRIGGER OBJECT");
     }
