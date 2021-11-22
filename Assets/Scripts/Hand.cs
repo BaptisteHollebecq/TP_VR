@@ -28,7 +28,22 @@ public class Hand : MonoBehaviour
         Debug.Log("COLLIDE OFF OBJECT");
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (_object != null)
+        {
+            return;
+        }
+
+        _object = other.gameObject;
+        Debug.Log("TRIGGER OBJECT");
+    }
     
+    private void OnTriggerExit(Collider other)
+    {
+        _object = null;
+        Debug.Log("TRIGGER OFF OBJECT");
+    }
 
     public void GrabObject()
     {
