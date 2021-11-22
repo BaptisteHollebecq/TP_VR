@@ -25,7 +25,7 @@ public class Hand : MonoBehaviour
 
     public void GrabObject()
     {
-        if (_object != null)
+        if (_object != null && _object.layer.Equals("Grabbable"))
         {
             _rb = _object.GetComponent<Rigidbody>();
             _rb.isKinematic = true;
