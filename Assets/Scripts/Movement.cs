@@ -14,6 +14,11 @@ public class Movement : MonoBehaviour
 
     bool pressed = false;
 
+    private void Awake()
+    {
+        actionReference.action.Enable();
+    }
+
     void Update()
     {
         if (actionReference != null && actionReference.action != null)
@@ -30,7 +35,8 @@ public class Movement : MonoBehaviour
                 b.height = PlayerRig.transform.position.y;
                 b.playerRig = PlayerRig;
                 b.handController = PlayerRig.GetComponent<HandsController>();
-                b.Shoot(-transform.up);
+                Vector3 direction = transform.GetChild(0).transform.forward;
+                b.Shoot(direction);
             }
         }
     }
