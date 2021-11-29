@@ -5,10 +5,12 @@ using UnityEngine;
 public class Orb : MonoBehaviour
 {
     public GameObject playerRig;
+    public HandsController handController;
     public float height = 1.65f;
     public float Power = 10f;
 
     private Rigidbody _rb;
+    public bool waterTouched = false;
 
     private void Awake()
     {
@@ -30,6 +32,23 @@ public class Orb : MonoBehaviour
             position.y += height;
 
             playerRig.transform.position = position;
+
+           /* if (waterTouched && handController.LeftHand.Object != null)
+            {
+                if (handController.LeftHand.Object.TryGetComponent<Torch>(out Torch t))
+                {
+                    if (t.On)
+                        t.Switch();
+                }
+            }
+            if (waterTouched && handController.RightHand.Object != null)
+            {
+                if (handController.RightHand.Object.TryGetComponent<Torch>(out Torch t))
+                {
+                    if (t.On)
+                        t.Switch();
+                }
+            }*/
 
             Destroy(gameObject);
         }

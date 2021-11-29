@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 379354267858117879}
   - component: {fileID: 4912707743091232107}
   - component: {fileID: 2953289870698338380}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Orb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -125,7 +125,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 344071ef5ce036c4d835079c61cf6da1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GroundLayer:
-    serializedVersion: 2
-    m_Bits: 64
+  playerRig: {fileID: 0}
+  handController: {fileID: 0}
+  height: 1.65
   Power: 10
+  waterTouched: 0
