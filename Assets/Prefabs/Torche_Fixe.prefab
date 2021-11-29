@@ -117,7 +117,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3638367340653220678}
   - component: {fileID: 8364710045368120757}
-  m_Layer: 0
+  - component: {fileID: 5303771264377173044}
+  m_Layer: 7
   m_Name: Torche_Fixe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -157,6 +158,19 @@ MonoBehaviour:
   torchLight: {fileID: 3638367340477425902}
   sphere: {fileID: 6053116598046049033}
   On: 1
+--- !u!65 &5303771264377173044
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3638367340653220677}
+  m_Material: {fileID: 13400000, guid: 576c5bdbed9046649938caed80d6838f, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.46729255, y: 1.3633971, z: 0.46729267}
+  m_Center: {x: 0.0020647347, y: 0.6813699, z: -0.0061942935}
 --- !u!1001 &3638367340830169881
 PrefabInstance:
   m_ObjectHideFlags: 0

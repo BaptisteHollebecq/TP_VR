@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1480253692286827746}
   - component: {fileID: 5094245571961335226}
   - component: {fileID: 7862968006955245239}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: torche_balise_tex
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,7 +89,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1101041736985421775}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 576c5bdbed9046649938caed80d6838f, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
