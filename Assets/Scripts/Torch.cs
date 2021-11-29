@@ -6,12 +6,10 @@ public class Torch : MonoBehaviour
 {
     public GameObject fire;
     public Light torchLight;
+    public Collider sphere;
 
     public bool On = true;
-    public float maxIntesity = 1.5f;
-    public float minIntesity = 0.5f;
 
-    private float baseIntensity;
 
     private void Start()
     {
@@ -19,11 +17,6 @@ public class Torch : MonoBehaviour
         {
             torchLight.enabled = false;
             fire.SetActive(false);
-        }
-        else
-        {
-            baseIntensity = torchLight.intensity;
-           // StartCoroutine(DoFlicker());
         }
     }
 
@@ -34,15 +27,12 @@ public class Torch : MonoBehaviour
             On = true;
             torchLight.enabled = true;
             fire.SetActive(true);
-            baseIntensity = torchLight.intensity;
-            //StartCoroutine(DoFlicker());
         }
         else
         {
             On = false;
             torchLight.enabled = false;
             fire.SetActive(false);
-            //StopCoroutine(DoFlicker());
         }
     }
 
@@ -50,21 +40,18 @@ public class Torch : MonoBehaviour
     {
         if (other.tag == "Light")
         {
+            Torch t = other.transform.parent.GetComponent<Torch>();
             if (On)
             {
-                Torch t = other.transform.parent.GetComponent<Torch>();
-                if (t != this)
+                if (t != this && !t.On)
                     t.Switch();
             }
-        }
-    }
+            else
+            {
+                if (t != this && t.On)
+                    Switch();
+            }
 
-    private IEnumerator DoFlicker()
-    {
-        while (true)
-        {
-            torchLight.intensity = Mathf.Lerp(torchLight.intensity, Random.Range(baseIntensity - minIntesity, baseIntensity + maxIntesity), 300 * Time.deltaTime);
-            yield return new WaitForSeconds(.1f);
         }
     }
 
