@@ -29,7 +29,7 @@ public class HandsController : MonoBehaviour
 
     private void Update()
     {
-        if (_leftPressed > MIN_TRIGGER && !RightHand.Holding)
+        if (_leftPressed > MIN_TRIGGER && !LeftHand.Holding)
         {
             Debug.Log("Grab object");
             LeftHand.GrabObject();

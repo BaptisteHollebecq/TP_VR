@@ -233,6 +233,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Holding: 0
+  Object: {fileID: 0}
 --- !u!54 &80892350
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -245,7 +246,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -259,6 +260,7 @@ GameObject:
   m_Component:
   - component: {fileID: 81463929}
   - component: {fileID: 81463930}
+  - component: {fileID: 81463931}
   m_Layer: 7
   m_Name: LeftHand
   m_TagString: Untagged
@@ -327,6 +329,29 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Rotation
       m_Flags: 0
+--- !u!114 &81463931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 81463928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05e8d9a6bd1d7ee428d3f6cfbc7aac51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  VelocityProperty:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Velocity Property
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 1bb54bca-ce89-41a3-8152-9b0813d10ab9
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+    m_Reference: {fileID: -440884980314325824, guid: 36e3e04891c2c594eab5c6329ac90682, type: 3}
 --- !u!1 &169939043
 GameObject:
   m_ObjectHideFlags: 0
@@ -433,6 +458,7 @@ GameObject:
   - component: {fileID: 574024772}
   - component: {fileID: 574024771}
   - component: {fileID: 574024774}
+  - component: {fileID: 574024775}
   m_Layer: 7
   m_Name: LeftSphere
   m_TagString: Untagged
@@ -529,6 +555,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Holding: 0
+  Object: {fileID: 0}
+--- !u!54 &574024775
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 574024769}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1208729391
 GameObject:
   m_ObjectHideFlags: 0
@@ -651,6 +694,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1419664747}
   - component: {fileID: 1419664748}
+  - component: {fileID: 1419664749}
   m_Layer: 7
   m_Name: RightHand
   m_TagString: Untagged
@@ -719,6 +763,29 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Rotation
       m_Flags: 0
+--- !u!114 &1419664749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1419664746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05e8d9a6bd1d7ee428d3f6cfbc7aac51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  VelocityProperty:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Velocity Property
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 2613bb4f-b151-4842-808a-44be3b0d69a8
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+    m_Reference: {fileID: 3992666638178533046, guid: 36e3e04891c2c594eab5c6329ac90682, type: 3}
 --- !u!1 &1544513412
 GameObject:
   m_ObjectHideFlags: 0

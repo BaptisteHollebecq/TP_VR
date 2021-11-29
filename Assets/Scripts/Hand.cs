@@ -4,24 +4,27 @@ using UnityEngine;
 
 public class Hand : MonoBehaviour
 {
-    [SerializeField]
     public bool Holding = false;
-
     public GameObject Object = null;
-    private Rigidbody _rb;
-    private float _grabLayer = 9;
 
+    private Rigidbody _rb;
 
     private void OnTriggerEnter(Collider other)
     {
-        Object = other.gameObject;
-        Debug.Log("TRIGGER OBJECT");
+        if (!Holding)
+        {
+            Object = other.gameObject;
+            Debug.Log("TRIGGER OBJECT");
+        }
     }
     
     private void OnTriggerExit(Collider other)
     {
-        Object = null;
-        Debug.Log("TRIGGER OFF OBJECT");
+        if (!Holding)
+        {
+            Object = null;
+            Debug.Log("TRIGGER OFF OBJECT");
+        }
     }
 
     public void GrabObject()
@@ -36,19 +39,10 @@ public class Hand : MonoBehaviour
         }
     }
 
-    private Vector3 _prevPosition;
-
-    private void Update()
-    {
-        _prevPosition = transform.position;
-    }
-
     public void DropObject()
     {
         Object.transform.parent = null;
         _rb.isKinematic = false;
-        Vector3 vel = (transform.position - _prevPosition) / Time.deltaTime;
-        _rb.velocity = vel;
         Holding = false;
         Debug.Log("DROP OBJECT");
     }
