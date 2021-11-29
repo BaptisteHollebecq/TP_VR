@@ -109,6 +109,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Holding: 0
+  Object: {fileID: 0}
 --- !u!1 &3829319339208420571
 GameObject:
   m_ObjectHideFlags: 0
@@ -119,6 +120,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3829319339208420568}
   - component: {fileID: 3829319339208420569}
+  - component: {fileID: 7764828719619543827}
   m_Layer: 0
   m_Name: RightHand
   m_TagString: Untagged
@@ -187,6 +189,21 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Rotation
       m_Flags: 0
+--- !u!114 &7764828719619543827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3829319339208420571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6351f24543089840ad04075c3ced939, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ActionReference: {fileID: -1717032506481935631, guid: 36e3e04891c2c594eab5c6329ac90682, type: 3}
+  PlayerRig: {fileID: 3829319339832982799}
+  Orb: {fileID: 379354267858117876, guid: f38c25b07f5a67f48a6d2de23bb5e1ef, type: 3}
 --- !u!1 &3829319339440014583
 GameObject:
   m_ObjectHideFlags: 0
@@ -461,6 +478,7 @@ MonoBehaviour:
   LeftHandObject: {fileID: 3829319340882060380}
   rightHandObject: {fileID: 3829319339208420571}
   Orb: {fileID: 379354267858117876, guid: f38c25b07f5a67f48a6d2de23bb5e1ef, type: 3}
+  handController: {fileID: 0}
 --- !u!114 &3720271667011921654
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -485,6 +503,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3829319340882060381}
   - component: {fileID: 3829319340882060378}
+  - component: {fileID: 7687075312073055441}
   m_Layer: 0
   m_Name: LeftHand
   m_TagString: Untagged
@@ -553,6 +572,21 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Rotation
       m_Flags: 0
+--- !u!114 &7687075312073055441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3829319340882060380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6351f24543089840ad04075c3ced939, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ActionReference: {fileID: 3625409323831545058, guid: 36e3e04891c2c594eab5c6329ac90682, type: 3}
+  PlayerRig: {fileID: 3829319339832982799}
+  Orb: {fileID: 379354267858117876, guid: f38c25b07f5a67f48a6d2de23bb5e1ef, type: 3}
 --- !u!1 &8543829144311949797
 GameObject:
   m_ObjectHideFlags: 0
@@ -662,3 +696,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Holding: 0
+  Object: {fileID: 0}
