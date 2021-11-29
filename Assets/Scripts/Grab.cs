@@ -27,10 +27,10 @@ public class Grab : MonoBehaviour
     {
         lastpos = transform.position;
 
-
         if (actionReference != null && actionReference.action != null)
         {
             float value = actionReference.action.ReadValue<float>();
+            Debug.Log(value);
             if (value > .9f)
             {
                 grip = true;
@@ -38,7 +38,7 @@ public class Grab : MonoBehaviour
                 {
                     inHand.transform.parent = transform.parent;
                     Rigidbody rb = inHand.GetComponent<Rigidbody>();
-                   rb.isKinematic = true;
+                    rb.isKinematic = true;
                     rb.useGravity = false;
                 }
             }
@@ -50,8 +50,8 @@ public class Grab : MonoBehaviour
                     inHand.transform.parent = null;
                     Rigidbody rb = inHand.GetComponent<Rigidbody>();
                     rb.isKinematic = false;
-                   rb.useGravity = true;
-                    rb.velocity = ((transform.position - lastpos) / Time.deltaTime) * 50000;
+                    rb.useGravity = true;
+                    //rb.velocity = ((transform.position - lastpos) / Time.deltaTime) * 50000;
                     inHand = null;
                 }
             }
@@ -63,6 +63,7 @@ public class Grab : MonoBehaviour
     {
         if (other.gameObject.tag == "Grab")
         {
+            Debug.Log(other.gameObject);
             inHand = other.gameObject;
         }
     }
