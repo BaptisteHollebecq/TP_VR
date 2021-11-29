@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -134,6 +134,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mur_Eau (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1260753125109179125, guid: 8ffdd5d26a3d55f45aa75af4cc5ddb86, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1260753125109179129, guid: 8ffdd5d26a3d55f45aa75af4cc5ddb86, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -196,7 +200,7 @@ GameObject:
   - component: {fileID: 922511116}
   - component: {fileID: 922511115}
   - component: {fileID: 922511114}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Cube
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -279,6 +283,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1085388003 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3829319340882060380, guid: bc0ad69c25c3d804c9a3fe07da494ff6, type: 3}
+  m_PrefabInstance: {fileID: 1206031442}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1085388006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1085388003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6351f24543089840ad04075c3ced939, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ActionReference: {fileID: 3625409323831545058, guid: 36e3e04891c2c594eab5c6329ac90682, type: 3}
+  PlayerRig: {fileID: 1206031443}
+  Orb: {fileID: 379354267858117876, guid: f38c25b07f5a67f48a6d2de23bb5e1ef, type: 3}
 --- !u!1001 &1098019555
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -424,6 +448,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3829319339440014581, guid: bc0ad69c25c3d804c9a3fe07da494ff6, type: 3}
+      propertyPath: near clip plane
+      value: 0.01
+      objectReference: {fileID: 0}
     - target: {fileID: 3829319339681386480, guid: bc0ad69c25c3d804c9a3fe07da494ff6, type: 3}
       propertyPath: m_IsTrigger
       value: 1
@@ -458,7 +486,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3829319339832982796, guid: bc0ad69c25c3d804c9a3fe07da494ff6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3829319339832982796, guid: bc0ad69c25c3d804c9a3fe07da494ff6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -512,6 +540,10 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4254041719914411254, guid: bc0ad69c25c3d804c9a3fe07da494ff6, type: 3}
+      propertyPath: handController
+      value: 
+      objectReference: {fileID: 1206031446}
     - target: {fileID: 4626328386949711130, guid: bc0ad69c25c3d804c9a3fe07da494ff6, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.1
@@ -573,11 +605,10 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &1206031445
+--- !u!114 &1206031446 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 3720271667011921654, guid: bc0ad69c25c3d804c9a3fe07da494ff6, type: 3}
+  m_PrefabInstance: {fileID: 1206031442}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1206031443}
   m_Enabled: 1
@@ -585,8 +616,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71779c1fd46123645859098c8b1e089b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LeftHand: {fileID: 0}
-  RightHand: {fileID: 0}
 --- !u!1 &1446803297
 GameObject:
   m_ObjectHideFlags: 0

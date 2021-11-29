@@ -52,8 +52,30 @@
                 },
                 {
                     "name": "",
+                    "id": "616e23b0-0268-4984-8434-41b8e454c93b",
+                    "path": "<OculusTouchController>{LeftHand}/trigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "LeftTriggerPressed",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "dee45932-7c33-45e3-ae5c-f9e938d55c2e",
                     "path": "<XRController>{RightHand}/trigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RightTriggerPressed",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1bda720b-b24a-4b37-9764-2355b95bae86",
+                    "path": "<OculusTouchController>{RightHand}/trigger",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -74,8 +96,41 @@
                 },
                 {
                     "name": "",
+                    "id": "896244d5-3414-40bf-959f-40e201e064e4",
+                    "path": "<OculusTouchController>{LeftHand}/grip",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "LeftGripPressed",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "cf1ceb4c-d8f1-41ef-bdca-018c4813e00e",
+                    "path": "<OpenVROculusTouchController>{LeftHand}/grip",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "LeftGripPressed",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "66c758fa-673e-464e-be26-5d8125c6b496",
                     "path": "<XRController>{RightHand}/grip",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RightGripPressed",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c2aa760d-3f7a-4ca7-87e4-89b665341525",
+                    "path": "<OculusTouchController>{RightHand}/grip",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

@@ -33,7 +33,7 @@ public class Orb : MonoBehaviour
 
             playerRig.transform.position = position;
 
-            if (waterTouched && handController.LeftHand.Object != null)
+           /* if (waterTouched && handController.LeftHand.Object != null)
             {
                 if (handController.LeftHand.Object.TryGetComponent<Torch>(out Torch t))
                 {
@@ -48,13 +48,9 @@ public class Orb : MonoBehaviour
                     if (t.On)
                         t.Switch();
                 }
-            }
+            }*/
 
             Destroy(gameObject);
-        }
-        else if (collision.gameObject.tag == "Water")
-        {
-            waterTouched = true;
         }
 
     }
