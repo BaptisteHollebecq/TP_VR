@@ -11,7 +11,7 @@ public class Grab : MonoBehaviour
 
     //public GrabManager manager;
 
-    private bool grip = false;
+    public bool grip = false;
     public GameObject inHand = null;
     private Rigidbody _rb;
 
@@ -31,7 +31,7 @@ public class Grab : MonoBehaviour
         {
             float value = actionReference.action.ReadValue<float>();
             Debug.Log(value);
-            if (value > .9f)
+            if (value > .99f)
             {
                 grip = true;
                 if (inHand != null)
@@ -42,7 +42,7 @@ public class Grab : MonoBehaviour
                     rb.useGravity = false;
                 }
             }
-            if (value < .5f && grip)
+            if (value < .95f && grip)
             {
                 grip = false;
                 if (inHand != null)

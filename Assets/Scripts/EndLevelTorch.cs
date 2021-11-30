@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EndLevelTorch : MonoBehaviour
 {
     public GameObject Fire;
     public Light torchLight;
+    public float waitingtime = 1;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -25,7 +27,7 @@ public class EndLevelTorch : MonoBehaviour
 
     IEnumerator EndLevel()
     {
-        yield return new WaitForSeconds(1);
-        Debug.Log("Success");
+        yield return new WaitForSeconds(waitingtime);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

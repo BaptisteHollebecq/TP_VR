@@ -4,6 +4,6 @@ using UnityEngine;
 
 public class GrabManager : MonoBehaviour
 {
-    public GameObject leftHand;
-    public GameObject rightHand;
+    public Grab leftHand;
+    public Grab rightHand;
 }
