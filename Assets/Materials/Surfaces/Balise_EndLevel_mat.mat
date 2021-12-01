@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: TrimSheet_1_mat
-  m_Shader: {fileID: 4800000, guid: e471f90dc03adf24ca44a23993f88c08, type: 3}
+  m_Name: Balise_EndLevel_mat
+  m_Shader: {fileID: 4800000, guid: fe325d193c3649d468e070bff214db4c, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
@@ -45,7 +45,9 @@ Material:
     - _CustomLightingOffset: 0.31
     - _Float0: 0.38
     - _FresnelPower: 0
+    - _FresnelPower1: 5
     - _FresnelScale: 0
+    - _FresnelScale1: 1
     - _NormalScale: 1.93
     - _RotateTex: 12.47
     - _Shadow: -0.05
@@ -55,6 +57,7 @@ Material:
     m_Colors:
     - _DiffuseColor: {r: 0, g: 0.502943, b: 1, a: 0}
     - _FresnelColor: {r: 0, g: 0, b: 0, a: 1}
+    - _FresnelColor1: {r: 0, g: 1, b: 0.039215688, a: 0}
     - _HalfToneUV: {r: 25, g: 25, b: 0, a: 0}
     - _MainColor: {r: 0.5943396, g: 0.37725288, b: 0.13737096, a: 0}
     - _Objectcolor: {r: 1, g: 1, b: 1, a: 0}

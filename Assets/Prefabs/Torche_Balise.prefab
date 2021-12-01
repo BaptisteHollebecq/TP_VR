@@ -59,7 +59,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a48523682bb61d54ba1886ef18ae13a4, type: 2}
+  - {fileID: 2100000, guid: 50f2dab3162f2024aa1e41a188a74b90, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -133,6 +133,10 @@ MonoBehaviour:
   torchLight: {fileID: 2211807020598171202}
   sphere: {fileID: 8473060771733429570}
   On: 1
+  dinamite: 0
+  timeBeforeExplosion: 3
+  explosionRadius: 2
+  explosionForce: 50
 --- !u!65 &4229087396878514410
 BoxCollider:
   m_ObjectHideFlags: 0

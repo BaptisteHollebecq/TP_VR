@@ -8,7 +8,7 @@ public class Torch : MonoBehaviour
     public GameObject fire;
     public Light torchLight;
     public Collider sphere;
-
+    
     public bool On = true;
     public bool dinamite = false;
     public float timeBeforeExplosion = 3f;
@@ -18,10 +18,17 @@ public class Torch : MonoBehaviour
     Coroutine explosion;
     bool exploded = false;
 
+    public GameObject explosionFx;
+    private MeshRenderer mesh;
+
     private void Start()
     {
+        mesh = GetComponent<MeshRenderer>();
         if (dinamite)
+        {
             On = false;
+        }
+
         if (!On)
         {
             torchLight.enabled = false;
@@ -70,8 +77,15 @@ public class Torch : MonoBehaviour
 
     IEnumerator CavaPeter()
     {
+
         yield return new WaitForSeconds(timeBeforeExplosion);
         Explode();
+    }
+
+    IEnumerator CaAPeter()
+    {
+        yield return new WaitForSeconds(0.5f);
+        Destroy(gameObject);
     }
 
     private void Explode()
@@ -100,7 +114,9 @@ public class Torch : MonoBehaviour
                     }
                 }
             }
-            Destroy(gameObject);
+            explosionFx.SetActive(true);
+            mesh.enabled = false;
+            StartCoroutine(CaAPeter());
         }
     }
 
