@@ -14,7 +14,6 @@ public class Grab : MonoBehaviour
     public InputActionReference actionReference { get => m_ActionReference; set => m_ActionReference = value; }
 
     public InputActionReference velocityReference { get => m_VelocityReference; set => m_VelocityReference = value; }
-    //public GrabManager manager;
 
     public bool grip = false;
     public GameObject inHand = null;
