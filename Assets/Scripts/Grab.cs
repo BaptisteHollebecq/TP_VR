@@ -7,9 +7,13 @@ public class Grab : MonoBehaviour
 {
     [SerializeField]
     private InputActionReference m_ActionReference;
+
+    [SerializeField]
+    private InputActionReference m_VelocityReference;
+
     public InputActionReference actionReference { get => m_ActionReference; set => m_ActionReference = value; }
 
-    public InputActionReference velocityReference { get => m_ActionReference; set => m_ActionReference = value; }
+    public InputActionReference velocityReference { get => m_VelocityReference; set => m_VelocityReference = value; }
     //public GrabManager manager;
 
     public bool grip = false;

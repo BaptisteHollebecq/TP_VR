@@ -109,6 +109,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ActionReference: {fileID: -1289947363739713011, guid: e0ca4504471ca124088e1e2cfe6804ae, type: 3}
+  m_VelocityReference: {fileID: -3902679191994482305, guid: e0ca4504471ca124088e1e2cfe6804ae, type: 3}
+  grip: 0
   inHand: {fileID: 0}
   velocity: {x: 0, y: 0, z: 0}
 --- !u!1 &3829319339208420571
@@ -808,5 +810,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ActionReference: {fileID: -5194266436686895582, guid: e0ca4504471ca124088e1e2cfe6804ae, type: 3}
+  m_VelocityReference: {fileID: 6246800574182511339, guid: e0ca4504471ca124088e1e2cfe6804ae, type: 3}
+  grip: 0
   inHand: {fileID: 0}
   velocity: {x: 0, y: 0, z: 0}
