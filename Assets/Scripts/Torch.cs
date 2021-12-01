@@ -40,12 +40,18 @@ public class Torch : MonoBehaviour
     {
         if (other.tag == "Light")
         {
+            Torch t = other.transform.parent.GetComponent<Torch>();
             if (On)
             {
-                Torch t = other.transform.parent.GetComponent<Torch>();
                 if (t != this && !t.On)
                     t.Switch();
             }
+            else
+            {
+                if (t != this && t.On)
+                    Switch();
+            }
+
         }
     }
 

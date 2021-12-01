@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 1137016833325562668}
   - component: {fileID: 1480253692286827746}
   - component: {fileID: 5094245571961335226}
-  m_Layer: 0
+  - component: {fileID: 7862968006955245239}
+  m_Layer: 7
   m_Name: torche_balise_tex
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81,6 +82,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &7862968006955245239
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1101041736985421775}
+  m_Material: {fileID: 13400000, guid: 576c5bdbed9046649938caed80d6838f, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -8431797673702609728, guid: c3e2d17e3ebb12b4ab6833c2ce934a10, type: 3}
 --- !u!1 &1601409725037615996
 GameObject:
   m_ObjectHideFlags: 0
@@ -90,10 +105,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5147880768691720293}
-  - component: {fileID: 4707616697506704788}
-  - component: {fileID: 4229087396878514410}
-  m_Layer: 7
-  m_Name: Torche_Balise
+  - component: {fileID: 7070197254864982979}
+  - component: {fileID: 1445774653713782775}
+  m_Layer: 0
+  m_Name: Torche_Balise_endLevel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -116,7 +131,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4707616697506704788
+--- !u!114 &7070197254864982979
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -125,26 +140,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 1601409725037615996}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a70880b564802824795fe9b55df8cc27, type: 3}
+  m_Script: {fileID: 11500000, guid: 70633e83e352a5a45ac6bb6dde3588aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fire: {fileID: 2492363966634330475}
+  Fire: {fileID: 2492363966634330475}
   torchLight: {fileID: 2211807020598171202}
-  sphere: {fileID: 8473060771733429570}
-  On: 1
---- !u!65 &4229087396878514410
-BoxCollider:
+--- !u!135 &1445774653713782775
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1601409725037615996}
-  m_Material: {fileID: 13400000, guid: 576c5bdbed9046649938caed80d6838f, type: 2}
-  m_IsTrigger: 0
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.60528624, y: 1.5473363, z: 0.64212626}
-  m_Center: {x: -0.007894322, y: 0.77363884, z: -0.000000029802322}
+  m_Radius: 0.3
+  m_Center: {x: 0, y: 1.82, z: 0}
 --- !u!1 &2492363966634330475
 GameObject:
   m_ObjectHideFlags: 0
@@ -162,7 +175,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &238468829183474191
 Transform:
   m_ObjectHideFlags: 0
@@ -236,10 +249,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3212786839344731598}
   - component: {fileID: 2211807020598171202}
-  - component: {fileID: 8473060771733429570}
   m_Layer: 0
   m_Name: Point Light (2)
-  m_TagString: Light
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -265,7 +277,7 @@ Light:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3477496622736942662}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
@@ -320,16 +332,3 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!135 &8473060771733429570
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3477496622736942662}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.29
-  m_Center: {x: 0, y: 0, z: 0}

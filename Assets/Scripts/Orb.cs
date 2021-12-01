@@ -26,30 +26,31 @@ public class Orb : MonoBehaviour
     {
         if (collision.gameObject.tag == "Ground")
         {
-            Debug.Log("ground");
 
             Vector3 position = collision.contacts[0].point;
             position.y += height;
 
             playerRig.transform.position = position;
-
-           /* if (waterTouched && handController.LeftHand.Object != null)
+            if (waterTouched)
             {
-                if (handController.LeftHand.Object.TryGetComponent<Torch>(out Torch t))
+                GrabManager gm = playerRig.GetComponent<GrabManager>();
+                if (gm.leftHand.inHand != null && gm.leftHand.grip)
                 {
-                    if (t.On)
-                        t.Switch();
+                    if (gm.leftHand.inHand.TryGetComponent<Torch>(out Torch t))
+                    {
+                        if (t.On)
+                            t.Switch();
+                    }
+                }
+                if (gm.rightHand.inHand != null && gm.rightHand.grip)
+                {
+                    if (gm.rightHand.inHand.TryGetComponent<Torch>(out Torch t))
+                    {
+                        if (t.On)
+                            t.Switch();
+                    }
                 }
             }
-            if (waterTouched && handController.RightHand.Object != null)
-            {
-                if (handController.RightHand.Object.TryGetComponent<Torch>(out Torch t))
-                {
-                    if (t.On)
-                        t.Switch();
-                }
-            }*/
-
             Destroy(gameObject);
         }
 
