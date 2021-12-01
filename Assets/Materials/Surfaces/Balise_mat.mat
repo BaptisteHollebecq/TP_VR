@@ -57,7 +57,7 @@ Material:
     m_Colors:
     - _DiffuseColor: {r: 0, g: 0.502943, b: 1, a: 0}
     - _FresnelColor: {r: 0, g: 0, b: 0, a: 1}
-    - _FresnelColor1: {r: 0, g: 1, b: 0.039215688, a: 0}
+    - _FresnelColor1: {r: 0, g: 0.41164446, b: 1, a: 0}
     - _HalfToneUV: {r: 25, g: 25, b: 0, a: 0}
     - _MainColor: {r: 0.5943396, g: 0.37725288, b: 0.13737096, a: 0}
     - _Objectcolor: {r: 1, g: 1, b: 1, a: 0}
