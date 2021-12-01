@@ -13,6 +13,7 @@ public class DestructibleWall : MonoBehaviour
         {
             rb.isKinematic = false;
             rb.useGravity = true;
+            position.y += 1;
             rb.AddExplosionForce(power, position, radius);
             Destroy(rb.gameObject, timeBeforeDecay);
         }
