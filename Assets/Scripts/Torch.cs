@@ -16,6 +16,7 @@ public class Torch : MonoBehaviour
     public float explosionForce = 50f;
 
     Coroutine explosion;
+    bool exploded = false;
 
     private void Start()
     {
@@ -75,22 +76,37 @@ public class Torch : MonoBehaviour
 
     private void Explode()
     {
-        Collider[] touched = Physics.OverlapSphere(transform.position, explosionRadius);
-        if (touched.Length > 0)
+        if (!exploded)
         {
-            foreach(var item in touched)
+            exploded = true;
+
+            Collider[] touched = Physics.OverlapSphere(transform.position, explosionRadius);
+            if (touched.Length > 0)
             {
-                if (item.gameObject.TryGetComponent<DestructibleWall>(out DestructibleWall dw))
+                foreach (var item in touched)
                 {
-                    dw.Explode(transform.position, explosionForce, explosionRadius + 1);
-                }
-                if (item.gameObject.TryGetComponent<GrabManager>(out GrabManager gm))
-                {
-                    gm.Death();
+                    if (item.gameObject.TryGetComponent<DestructibleWall>(out DestructibleWall dw))
+                    {
+                        dw.Explode(transform.position, explosionForce, explosionRadius + 1);
+                    }
+                    if (item.gameObject.TryGetComponent<GrabManager>(out GrabManager gm))
+                    {
+                        gm.Death();
+                    }
+                    if (item.gameObject.TryGetComponent<Torch>(out Torch t))
+                    {
+                        if (!t.exploded)
+                            t.StartCoroutine(t.Chain());
+                    }
                 }
             }
+            Destroy(gameObject);
         }
-         
-        Destroy(gameObject);
+    }
+
+    private IEnumerator Chain()
+    {
+        yield return new WaitForSeconds(0.2f);
+        Explode();
     }
 }
