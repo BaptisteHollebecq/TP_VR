@@ -9,6 +9,7 @@ public class Grab : MonoBehaviour
     private InputActionReference m_ActionReference;
     public InputActionReference actionReference { get => m_ActionReference; set => m_ActionReference = value; }
 
+    public InputActionReference velocityReference { get => m_ActionReference; set => m_ActionReference = value; }
     //public GrabManager manager;
 
     public bool grip = false;
@@ -16,16 +17,19 @@ public class Grab : MonoBehaviour
     private Rigidbody _rb;
 
     public Vector3 velocity = Vector3.zero;
-    private Vector3 lastpos = Vector3.zero;
 
     private void Awake()
     {
         actionReference.action.Enable();
+        velocityReference.action.Enable();
     }
 
     void Update()
     {
-        lastpos = transform.position;
+        if (velocityReference != null && velocityReference.action != null)
+        {
+            velocity = velocityReference.action.ReadValue<Vector3>();
+        }
 
         if (actionReference != null && actionReference.action != null)
         {
@@ -51,7 +55,7 @@ public class Grab : MonoBehaviour
                     Rigidbody rb = inHand.GetComponent<Rigidbody>();
                     rb.isKinematic = false;
                     rb.useGravity = true;
-                    //rb.velocity = ((transform.position - lastpos) / Time.deltaTime) * 50000;
+                    rb.velocity = velocity;
                     inHand = null;
                 }
             }

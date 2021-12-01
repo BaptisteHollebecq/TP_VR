@@ -14,9 +14,11 @@ public class Movement : MonoBehaviour
 
     bool pressed = false;
 
+
     private void Awake()
     {
         actionReference.action.Enable();
+
     }
 
     void Update()
