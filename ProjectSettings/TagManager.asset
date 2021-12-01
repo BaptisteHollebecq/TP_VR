@@ -8,6 +8,8 @@ TagManager:
   - Light
   - Ground
   - Water
+  - Orb
+  - Pikes
   layers:
   - Default
   - TransparentFX

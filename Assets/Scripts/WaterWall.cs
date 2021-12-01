@@ -13,5 +13,9 @@ public class WaterWall : MonoBehaviour
                 t.Switch();
             }
         }
+        if (other.gameObject.TryGetComponent<Orb>(out Orb o))
+        {
+            o.waterTouched = true;
+        }
     }
 }
