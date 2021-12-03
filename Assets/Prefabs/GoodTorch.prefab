@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 162100016644978946}
   - component: {fileID: 8259171671975271805}
   - component: {fileID: 1268754000960515856}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GoodTorch
   m_TagString: Grab
   m_Icon: {fileID: 0}
@@ -100,9 +100,9 @@ Rigidbody:
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 2
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!64 &162100016644978946
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -137,6 +137,7 @@ MonoBehaviour:
   timeBeforeExplosion: 3
   explosionRadius: 2
   explosionForce: 50
+  explosionFx: {fileID: 0}
 --- !u!135 &1268754000960515856
 SphereCollider:
   m_ObjectHideFlags: 0

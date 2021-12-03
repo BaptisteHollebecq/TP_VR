@@ -58,6 +58,7 @@ public class Torch : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log(other.name);
         if (other.tag == "Light")
         {
             Torch t = other.transform.parent.GetComponent<Torch>();
@@ -77,7 +78,6 @@ public class Torch : MonoBehaviour
 
     IEnumerator CavaPeter()
     {
-
         yield return new WaitForSeconds(timeBeforeExplosion);
         Explode();
     }
@@ -114,7 +114,8 @@ public class Torch : MonoBehaviour
                     }
                 }
             }
-            explosionFx.SetActive(true);
+            if (explosionFx != null)
+                explosionFx.SetActive(true);
             mesh.enabled = false;
             StartCoroutine(CaAPeter());
         }

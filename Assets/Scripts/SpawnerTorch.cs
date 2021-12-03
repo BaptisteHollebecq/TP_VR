@@ -28,7 +28,7 @@ public class SpawnerTorch : MonoBehaviour
         inst.transform.SetParent(transform);
         Rigidbody rb = inst.GetComponent<Rigidbody>();
         rb.isKinematic = true;
-        rb.useGravity = false;
+        rb.useGravity = true;
 
         respawning = false;
     }

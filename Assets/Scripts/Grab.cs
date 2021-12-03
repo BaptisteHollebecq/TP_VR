@@ -15,8 +15,11 @@ public class Grab : MonoBehaviour
 
     public InputActionReference velocityReference { get => m_VelocityReference; set => m_VelocityReference = value; }
 
+    public LayerMask GrabLayer;
+
+
     public bool grip = false;
-    public GameObject inHand = null;
+    public Rigidbody inHand = null;
     private Rigidbody _rb;
 
     public Vector3 velocity = Vector3.zero;
@@ -29,57 +32,54 @@ public class Grab : MonoBehaviour
 
     void Update()
     {
-        if (velocityReference != null && velocityReference.action != null)
-        {
-            velocity = velocityReference.action.ReadValue<Vector3>();
-        }
 
         if (actionReference != null && actionReference.action != null)
         {
             float value = actionReference.action.ReadValue<float>();
-            Debug.Log(value);
-            if (value > .99f)
-            {
+            if (value > .95f && !grip)
                 grip = true;
-                if (inHand != null)
-                {
-                    inHand.transform.parent = transform.parent;
-                    Rigidbody rb = inHand.GetComponent<Rigidbody>();
-                    rb.isKinematic = true;
-                    rb.useGravity = false;
-                }
-            }
-            if (value < .95f && grip)
+            else if (value < .9f && grip)
             {
                 grip = false;
-                if (inHand != null)
+                if (inHand)
                 {
-                    inHand.transform.parent = null;
-                    Rigidbody rb = inHand.GetComponent<Rigidbody>();
-                    rb.isKinematic = false;
-                    rb.useGravity = true;
-                    rb.velocity = velocity;
-                    inHand = null;
+                    inHand.transform.SetParent(null);
+                    inHand.useGravity = true;
+                    inHand.isKinematic = false;
+                    inHand.velocity = velocity * 1.5f;
                 }
             }
 
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void FixedUpdate()
     {
-        if (other.gameObject.tag == "Grab")
+        if (!grip)
         {
-            Debug.Log(other.gameObject);
-            inHand = other.gameObject;
+           Collider[] colliders = Physics.OverlapSphere(transform.position, .05f, GrabLayer);
+            if (colliders.Length > 0)
+                inHand = colliders[0].transform.GetComponent<Rigidbody>();
+            else
+                inHand = null;
         }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.tag == "Grab")
+        else
         {
-            inHand = null;
+            if (inHand)
+            {
+                if (inHand.transform.parent != transform.parent)
+                {
+                    inHand.transform.SetParent(transform.parent);
+                    inHand.isKinematic = true;
+                    inHand.useGravity = false;
+                }
+
+                if (velocityReference != null && velocityReference.action != null)
+                {
+                    velocity = velocityReference.action.ReadValue<Vector3>();
+                }
+
+            }
         }
     }
 }
