@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1146896756397393706}
   - component: {fileID: 522492189686074585}
   - component: {fileID: 3571013532010734797}
-  m_Layer: 12
+  m_Layer: 11
   m_Name: spawner_dynamite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -125,7 +125,7 @@ GameObject:
   - component: {fileID: 7145695214295641084}
   - component: {fileID: 7625511059412316856}
   - component: {fileID: 1818998089581603698}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: dynamite_attached001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -204,7 +204,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4685557733453409767}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}

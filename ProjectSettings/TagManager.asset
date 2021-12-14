@@ -3,21 +3,25 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Ground
+  - Grab
+  - Light
+  - Orb
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Menu
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Grab
+  - Light
+  - Ground
+  - Orb
+  - Pikes
+  - Wall
+  - AntiTP
   - 
   - 
   - 

@@ -59,8 +59,8 @@ public class Movement : MonoBehaviour
 
         if (menuReference != null && menuReference.action != null)
         {
-            bool valueb = actionReference.action.ReadValue<bool>();
-            if (valueb && !menu)
+            float valueb = menuReference.action.ReadValue<float>();
+            if (valueb > .99f && !menu)
             {
                 menu = true;
             }

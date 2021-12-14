@@ -13,6 +13,7 @@ public class UIMenu : MonoBehaviour
     public InputActionReference actionReference { get => m_ActionReference; set => m_ActionReference = value; }
 
     private bool isShown = false;
+    private bool canPress = true;
 
     private void Awake()
     {
@@ -25,17 +26,24 @@ public class UIMenu : MonoBehaviour
 
         if (actionReference != null && actionReference.action != null)
         {
-            bool value = actionReference.action.ReadValue<bool>();
-            if (value && !isShown)
+            float value = actionReference.action.ReadValue<float>();
+            if (value > .99f && canPress)
             {
-                isShown = true;
-                menu.SetActive(true);
+                if (!isShown)
+                {
+                    canPress = false;
+                    isShown = true;
+                    menu.SetActive(true);
+                }
+                else
+                {
+                    canPress = false;
+                    isShown = false;
+                    menu.SetActive(false);
+                }
             }
-            else
-            {
-                isShown = false;
-                menu.SetActive(false);
-            }
+            if (value < .5f && !canPress)
+                canPress = true;
         }
     }
 }

@@ -17,8 +17,8 @@ public class Grab : MonoBehaviour
 
     public LayerMask GrabLayer;
 
-
     public bool grip = false;
+    public GameObject DirectionIndicator;
     public Rigidbody inHand = null;
     private Rigidbody _rb;
 
@@ -81,5 +81,15 @@ public class Grab : MonoBehaviour
 
             }
         }
+    }
+
+    public void ShowIndicator()
+    {
+        DirectionIndicator.SetActive(true);
+    }
+
+    public void HideIndicator()
+    {
+        DirectionIndicator.SetActive(false);
     }
 }
