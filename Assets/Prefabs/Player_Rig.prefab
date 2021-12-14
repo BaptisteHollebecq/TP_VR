@@ -332,7 +332,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ActionReference: {fileID: -5684558904543120851, guid: e0ca4504471ca124088e1e2cfe6804ae, type: 3}
-  M_MenuReference: {fileID: 0}
+  M_MenuReference: {fileID: 4335090648579581189, guid: e0ca4504471ca124088e1e2cfe6804ae, type: 3}
   PlayerRig: {fileID: 3829319339832982799}
   Orb: {fileID: 379354267858117876, guid: f38c25b07f5a67f48a6d2de23bb5e1ef, type: 3}
 --- !u!1 &3829319339440014583
@@ -785,7 +785,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ActionReference: {fileID: 2526168894431210536, guid: e0ca4504471ca124088e1e2cfe6804ae, type: 3}
-  M_MenuReference: {fileID: 0}
+  M_MenuReference: {fileID: 4335090648579581189, guid: e0ca4504471ca124088e1e2cfe6804ae, type: 3}
   PlayerRig: {fileID: 3829319339832982799}
   Orb: {fileID: 379354267858117876, guid: f38c25b07f5a67f48a6d2de23bb5e1ef, type: 3}
 --- !u!1 &4082884251334385887
