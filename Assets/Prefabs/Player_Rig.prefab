@@ -192,9 +192,9 @@ MonoBehaviour:
   m_VelocityReference: {fileID: -3902679191994482305, guid: e0ca4504471ca124088e1e2cfe6804ae, type: 3}
   GrabLayer:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 64
   grip: 0
-  DirectionIndicator: {fileID: 0}
+  DirectionIndicator: {fileID: 7315232879443531640}
   inHand: {fileID: 0}
   velocity: {x: 0, y: 0, z: 0}
 --- !u!1 &3829319339208420571
@@ -676,7 +676,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3829319340882060380}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.085, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6470255227296749102}
@@ -901,9 +901,9 @@ MonoBehaviour:
   m_VelocityReference: {fileID: 6246800574182511339, guid: e0ca4504471ca124088e1e2cfe6804ae, type: 3}
   GrabLayer:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 64
   grip: 0
-  DirectionIndicator: {fileID: 0}
+  DirectionIndicator: {fileID: 6770837291357437199}
   inHand: {fileID: 0}
   velocity: {x: 0, y: 0, z: 0}
 --- !u!1 &5136474957352046209
@@ -1018,6 +1018,8 @@ GameObject:
   - component: {fileID: 8733909033889444433}
   - component: {fileID: 2788411027718695198}
   - component: {fileID: 796912037016605900}
+  - component: {fileID: 5126867548701521223}
+  - component: {fileID: 2303318587693196810}
   m_Layer: 0
   m_Name: Cylinder (1)
   m_TagString: Untagged
@@ -1102,6 +1104,34 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!114 &5126867548701521223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6770837291357437199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51d6e0d5fcc96304289faa84a2758173, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!54 &2303318587693196810
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6770837291357437199}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 3
 --- !u!1 &7315232879443531640
 GameObject:
   m_ObjectHideFlags: 0
@@ -1114,6 +1144,8 @@ GameObject:
   - component: {fileID: 8748461029044295734}
   - component: {fileID: 63730175085039971}
   - component: {fileID: 1156014553412701699}
+  - component: {fileID: 8599193793930450611}
+  - component: {fileID: 4424980279619402270}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -1198,3 +1230,31 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!114 &8599193793930450611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7315232879443531640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51d6e0d5fcc96304289faa84a2758173, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!54 &4424980279619402270
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7315232879443531640}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 3

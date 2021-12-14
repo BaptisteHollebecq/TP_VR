@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -24,10 +25,29 @@ public class Grab : MonoBehaviour
 
     public Vector3 velocity = Vector3.zero;
 
+    private bool indacatorShown = false;
+
     private void Awake()
     {
         actionReference.action.Enable();
         velocityReference.action.Enable();
+
+        Movement.TriggerPressed += TriggerPressedEvent;
+    }
+
+    private void OnDestroy()
+    {
+        Movement.TriggerPressed -= TriggerPressedEvent;
+        
+    }
+
+    private void TriggerPressedEvent(bool b)
+    {
+        if (b)
+            ShowIndicator();
+        else
+            HideIndicator();
+            
     }
 
     void Update()
@@ -85,11 +105,13 @@ public class Grab : MonoBehaviour
 
     public void ShowIndicator()
     {
+        indacatorShown = true;
         DirectionIndicator.SetActive(true);
     }
 
     public void HideIndicator()
     {
+        indacatorShown = false;
         DirectionIndicator.SetActive(false);
     }
 }

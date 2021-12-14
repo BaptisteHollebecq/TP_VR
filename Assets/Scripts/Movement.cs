@@ -5,6 +5,9 @@ using UnityEngine.InputSystem;
 
 public class Movement : MonoBehaviour
 {
+    public static event System.Action<bool> TriggerPressed;
+    public static event System.Action Trigger;
+
     [SerializeField]
     private InputActionReference m_ActionReference;
     [SerializeField]
@@ -18,6 +21,7 @@ public class Movement : MonoBehaviour
 
     bool pressed = false;
     bool menu = false;
+    bool canPress = true;
 
     private void Awake()
     {
@@ -34,10 +38,14 @@ public class Movement : MonoBehaviour
             if (!menu)
             {
                 if (value > 0.9f)
+                {
                     pressed = true;
+                    TriggerPressed?.Invoke(true);
+                }
                 if (value < .05f && pressed)
                 {
                     pressed = false;
+                    TriggerPressed?.Invoke(false);
                     var inst = Instantiate(Orb, transform.position, Quaternion.identity);
                     Orb b = inst.GetComponent<Orb>();
 
@@ -52,7 +60,7 @@ public class Movement : MonoBehaviour
             {
                 if (value > 0.9f && !pressed)
                 {
-
+                    Trigger?.Invoke();
                 }
             }
         }
@@ -60,13 +68,23 @@ public class Movement : MonoBehaviour
         if (menuReference != null && menuReference.action != null)
         {
             float valueb = menuReference.action.ReadValue<float>();
-            if (valueb > .99f && !menu)
+            if (valueb > .99f && canPress)
             {
-                menu = true;
+                canPress = false;
+                if (!menu)
+                {
+                    menu = true;
+                    TriggerPressed?.Invoke(true);
+                }
+                else
+                {
+                    menu = false;
+                    TriggerPressed?.Invoke(false);
+                }
             }
-            else
+            else if (valueb < .5f)
             {
-                menu = false;
+                canPress = true;
             }
         }
     }
