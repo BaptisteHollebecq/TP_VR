@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3638367340477425901}
   - component: {fileID: 3638367340477425902}
   - component: {fileID: 6053116598046049033}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Point Light (1)
   m_TagString: Light
   m_Icon: {fileID: 0}
@@ -118,7 +118,7 @@ GameObject:
   - component: {fileID: 3638367340653220678}
   - component: {fileID: 8364710045368120757}
   - component: {fileID: 5303771264377173044}
-  m_Layer: 7
+  m_Layer: 12
   m_Name: Torche_Fixe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -158,6 +158,11 @@ MonoBehaviour:
   torchLight: {fileID: 3638367340477425902}
   sphere: {fileID: 6053116598046049033}
   On: 1
+  dinamite: 0
+  timeBeforeExplosion: 3
+  explosionRadius: 2
+  explosionForce: 50
+  explosionFx: {fileID: 0}
 --- !u!65 &5303771264377173044
 BoxCollider:
   m_ObjectHideFlags: 0

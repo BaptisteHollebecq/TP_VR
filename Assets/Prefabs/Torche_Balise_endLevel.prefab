@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 5147880768691720293}
   - component: {fileID: 7070197254864982979}
   - component: {fileID: 1445774653713782775}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Torche_Balise_endLevel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -251,7 +251,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3212786839344731598}
   - component: {fileID: 2211807020598171202}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Point Light (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

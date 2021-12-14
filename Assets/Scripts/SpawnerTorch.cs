@@ -8,12 +8,13 @@ public class SpawnerTorch : MonoBehaviour
     public Transform spawner;
     public GameObject Torch;
     public float respawnTime = 5;
+    public int childcountTarget = 2;
 
     private bool respawning = false;
 
     private void Update()
     {
-        if (transform.childCount != 2 && !respawning)
+        if (transform.childCount != childcountTarget && !respawning)
         {
             respawning = true;
             StartCoroutine(Respawn());

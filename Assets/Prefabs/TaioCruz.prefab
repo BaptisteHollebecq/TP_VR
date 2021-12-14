@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2158553247217130155}
   - component: {fileID: 688976861328934599}
   - component: {fileID: 1152051785122072941}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Light
   m_TagString: Light
   m_Icon: {fileID: 0}
@@ -4926,7 +4926,7 @@ GameObject:
   - component: {fileID: 3510412760471250002}
   - component: {fileID: 6766093667395593820}
   - component: {fileID: 3374244326844386069}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: TaioCruz
   m_TagString: Grab
   m_Icon: {fileID: 0}
