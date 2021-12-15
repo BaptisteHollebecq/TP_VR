@@ -340,7 +340,7 @@
                 },
                 {
                     "name": "",
-                    "id": "a4d89858-1f41-4549-9b07-0ce57347f142",
+                    "id": "26e1d9b2-ea6b-46d5-a15c-b91b24002488",
                     "path": "<OculusTouchController>{LeftHand}/devicePose/velocity",
                     "interactions": "",
                     "processors": "",
@@ -351,7 +351,7 @@
                 },
                 {
                     "name": "",
-                    "id": "471d4789-5112-4650-95e6-7ec663e2c052",
+                    "id": "7a60597c-2ea7-4ddd-b223-744a0d70703a",
                     "path": "<ViveController>{LeftHand}/devicePose/velocity",
                     "interactions": "",
                     "processors": "",
@@ -701,7 +701,7 @@
                 },
                 {
                     "name": "",
-                    "id": "747a9537-a98f-4749-b637-2565c1abcdc5",
+                    "id": "47dbad32-dc4c-4eb4-9175-8897dd01daa9",
                     "path": "<ViveController>{RightHand}/devicePose/velocity",
                     "interactions": "",
                     "processors": "",
@@ -712,7 +712,7 @@
                 },
                 {
                     "name": "",
-                    "id": "b96f5856-6cf4-474e-8b2b-7452a201524c",
+                    "id": "718d9d64-15e2-43f8-ab58-ab819b47941a",
                     "path": "<OculusTouchController>{RightHand}/devicePose/velocity",
                     "interactions": "",
                     "processors": "",

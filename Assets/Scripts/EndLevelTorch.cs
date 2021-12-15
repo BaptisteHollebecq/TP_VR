@@ -9,6 +9,8 @@ public class EndLevelTorch : MonoBehaviour
     public Light torchLight;
     public float waitingtime = 1;
 
+    public bool endGame = false;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Light")
@@ -28,6 +30,9 @@ public class EndLevelTorch : MonoBehaviour
     IEnumerator EndLevel()
     {
         yield return new WaitForSeconds(waitingtime);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        if (!endGame)
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        else
+            SceneManager.LoadScene(0);
     }
 }

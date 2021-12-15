@@ -128,7 +128,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawner: {fileID: 5160135433576750406}
   Torch: {fileID: 5767267262126679524, guid: 76c3c5124357f994982bcc06e93748de, type: 3}
-  respawnTime: 5
+  respawnTime: 1
   childcountTarget: 2
 --- !u!65 &1561352874009265174
 BoxCollider:
