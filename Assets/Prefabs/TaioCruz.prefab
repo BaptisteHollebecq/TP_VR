@@ -5016,7 +5016,7 @@ MonoBehaviour:
   sphere: {fileID: 6766093667395593820}
   On: 0
   dinamite: 1
-  timeBeforeExplosion: 3
+  timeBeforeExplosion: 4
   explosionRadius: 5
   explosionForce: 950
   explosionFx: {fileID: 4462369045743024339}

@@ -66,7 +66,9 @@ public class Grab : MonoBehaviour
                     inHand.transform.SetParent(null);
                     inHand.useGravity = true;
                     inHand.isKinematic = false;
-                    inHand.velocity = velocity * 1.5f;
+                    Vector3 tmp = -velocity * 1.5f;
+                    tmp.y *= -1;
+                    inHand.velocity = tmp;
                 }
             }
 
